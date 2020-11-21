@@ -1,9 +1,79 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>payment</ion-title>
+    <ion-title>Payement</ion-title>
+    <ion-buttons slot="primary">
+      <ion-button color="danger" shape="round" [routerLink]="['/home']">
+        <ion-icon slot="icon-only" name="arrow-back-sharp"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
 
+  <div class="illustration">
+    <img src="assets/images/undraw_credit_card_payment_yb88.svg" alt="">
+    <br><br>
+    <div class="ion-text-center">
+      <ion-chip>
+        <ion-label color="light">Payer vos factures içi</ion-label>
+      </ion-chip>
+    </div>
+  </div>
+
+  <div class="form">
+    <ion-card>
+      <ion-card-content>
+      <ion-list>
+        <ion-item>
+          <ion-label position="floating">Date</ion-label>
+          <ion-datetime placeholder="Selectionner le mois et l'année"
+            displayFormat="MM-YYYY" ></ion-datetime>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Commune</ion-label>
+          <ion-select value="brown" okText="Valider" cancelText="Annuler">
+            <ion-select-option>Bandal</ion-select-option>
+            <ion-select-option>Bumbu</ion-select-option>
+            <ion-select-option>Gombe</ion-select-option>
+            <ion-select-option>Kalamu</ion-select-option>
+            <ion-select-option>Kingasani</ion-select-option>
+            <ion-select-option>Kinshasa</ion-select-option>
+            <ion-select-option>Lingwala</ion-select-option>
+            <ion-select-option>Matete</ion-select-option>
+            <ion-select-option>N'sele</ion-select-option>
+            <ion-select-option>Ndjili</ion-select-option>
+            <ion-select-option>Ngiri-Ngiri</ion-select-option>
+            <ion-select-option>Upn</ion-select-option>
+          </ion-select>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Avenue</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+
+        <ion-item>
+          <ion-label position="floating">Numéro</ion-label>
+          <ion-input></ion-input>
+        </ion-item>
+      </ion-list>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-content>
+        <p>Montant à payer pour la période</p>
+        <ion-chip>-------------</ion-chip>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-content>
+        <ion-button (click)="presentLoading()">Payer</ion-button>
+        <ion-button fill="outline">Voir mes factures</ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>
