@@ -1,0 +1,7 @@
+{
+  "name": "snel",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
